@@ -1,0 +1,39 @@
+/* .board {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto;
+    height: calc(100vh - 64px);
+  } */
+
+  .board {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto;
+    height: calc(100vh - 64px);
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .board::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .board::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+  
+  .board::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .board {
+      height: auto;
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }

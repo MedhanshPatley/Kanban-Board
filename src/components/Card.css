@@ -1,0 +1,172 @@
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  word-break: break-word;
+  width: 100%;
+}
+
+/* Only apply hover effects on devices that support hover */
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #bcbcbc;
+}
+
+.user-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  font-size: 12px;
+}
+
+@media (hover: hover) {
+  .user-avatar:hover {
+    transform: scale(1.1);
+  }
+}
+
+.status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  border: 1px solid #f4f5f8;
+}
+
+.status-indicator.available {
+  background: #00ff00;
+}
+
+.status-indicator.away {
+  background: #808080;
+}
+
+.card-footer {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: #cacaca;
+  height: 12px;
+  width: 12px;
+}
+
+.feature-tag {
+  display: flex;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  /* background-color: #00ff00; */
+  align-items: center;
+  gap: 5px;
+}
+
+.feature {
+  color: #bcbcbc;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .card {
+    padding: 10px;
+  }
+  
+  .card-header {
+    gap: 6px;
+  }
+  
+  .card-footer {
+    gap: 6px;
+  }
+}
+
+/* Small screen optimization */
+@media screen and (max-width: 480px) {
+  .card {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .user-avatar {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+  
+  .status-indicator {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* Touch device optimization */
+@media (pointer: coarse) {
+  .card {
+    padding: 12px;
+    margin-bottom: 8px;
+    touch-action: pan-y pinch-zoom;
+  }
+  
+  .user-avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .card {
+    border: 1px solid #000;
+  }
+  
+  .status-indicator {
+    border: 2px solid #000;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .user-avatar {
+    transition: none;
+  }
+  
+  .card:hover {
+    transform: none;
+  }
+}
