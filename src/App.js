@@ -13,6 +13,10 @@ function App() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    document.title = "Quicksell-Kanban Board";
+  }, []);
+
   const fetchData = async () => {
     try {
       const response = await fetch('https://api.quicksell.co/v1/internal/frontend-assignment');
