@@ -8,7 +8,6 @@
   width: 100%;
 }
 
-/* Only apply hover effects on devices that support hover */
 @media (hover: hover) {
   .card:hover {
     transform: translateY(-4px);
@@ -114,7 +113,7 @@
   }
 }
 
-/* Small screen optimization */
+
 @media screen and (max-width: 480px) {
   .card {
     padding: 8px;
@@ -133,7 +132,7 @@
   }
 }
 
-/* Touch device optimization */
+
 @media (pointer: coarse) {
   .card {
     padding: 12px;
@@ -148,7 +147,7 @@
   }
 }
 
-/* High contrast mode support */
+
 @media (prefers-contrast: high) {
   .card {
     border: 1px solid #000;
@@ -159,7 +158,6 @@
   }
 }
 
-/* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   .card,
   .user-avatar {

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import DisplayLogo from '../Assets/icons_FEtask/Display.svg'; // Import Display logo
-import DownIcon from '../Assets/icons_FEtask/down.svg'; // Import Dropdown icon
+import DisplayLogo from '../Assets/icons_FEtask/Display.svg'; 
+import DownIcon from '../Assets/icons_FEtask/down.svg'; 
 
 const Navbar = ({ grouping, sorting, onGroupingChange, onSortingChange }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
