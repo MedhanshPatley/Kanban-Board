@@ -16,21 +16,16 @@ import UrgentPrio from '../Assets/icons_FEtask/SVG - Urgent Priority colour.svg'
 const Column = ({ title, tickets, users }) => {
 
   const [grouping, setGrouping] = useState(localStorage.getItem('grouping'));
-  console.log(grouping);
+  
 
   const getGroupingIcon = (cond) => {
-    console.log(grouping)
     if(grouping == 'status'){
-      console.log(grouping)
-      console.log(cond)
       if(cond == 'Todo') return Todo;
       if(cond == 'In progress') return Progress;
       if(cond == 'Backlog') return Backlog;
     }
 
     if(grouping == 'priority'){
-      console.log(grouping)
-      console.log(cond)
       if(cond == 'Urgent') return UrgentPrio;
       if(cond == 'High') return HighPrio;
       if(cond == 'Medium') return MidPrio;
@@ -38,9 +33,6 @@ const Column = ({ title, tickets, users }) => {
       if(cond == 'No priority') return NoPrio;
     }
 
-    if(grouping == 'user'){
-      console.log(grouping)
-    }
   }
   return (
     <div className="column">
